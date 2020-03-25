@@ -48,8 +48,13 @@ return [
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST','***'),
             'port' => env('DB_PORT','3306'),
+<<<<<<< HEAD
             'database' => env('DB_DATABASE','***'),
             'username' => env('DB_USERNAME','***'),
+=======
+            'database' => env('DB_DATABASE','bdcontro_oleg'),
+            'username' => env('DB_USERNAME','bdcontro_oleg'),
+>>>>>>> 594c60738d6bfb2b58dc3854e177d934c5c42abb
             'password' => env('DB_PASSWORD','***'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
