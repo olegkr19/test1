@@ -13,9 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 Route::get('/api/ru/clients','ClientsController@index');
 Route::get('/api/ru/client/{id}','ClientsController@show');
 Route::post('/api/ru/client','ClientsController@store');

@@ -2,7 +2,7 @@
 
 namespace App\Services;
 
-use App\Client;
+use App\Models\Client;
 use App\Repositories\ClientRepository;
 use Illuminate\Http\Request;
 

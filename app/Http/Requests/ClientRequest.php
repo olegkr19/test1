@@ -28,8 +28,8 @@ class ClientRequest extends FormRequest
             'client_phone' => 'required|string',
             'client_email' => 'required|string',
             'client_card' => 'required|string',
-            'client_money' => '',
-            'client_data' => '',
+            'client_money' => 'required|string',
+            'client_data' => 'required|string',
         ];
         switch($this->getMethod()){
           case 'POST':
@@ -50,20 +50,7 @@ class ClientRequest extends FormRequest
         return [
             'email.required' => 'Email is required',
             'email.unique'  => 'This email is already taken',
-            'email.format'  => 'This email must contain @ and dot symbols and lowercase letters',
+            'email.format'  => 'This email should contain @ and dot symbols and lowercase letters',
         ];
-    }
-    public function all($keys = null)
-    {
-      // return $this->all();
-      $data = parent::all($keys);
-      switch ($this->getMethod())
-      {
-        // case 'PUT':
-        // case 'PATCH':
-        case 'DELETE':
-          $data['email'] = $this->route('email');
-      }
-      return $data;
     }
 }
